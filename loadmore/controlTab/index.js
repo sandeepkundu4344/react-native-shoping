@@ -45,7 +45,7 @@ export default (props) => {
         }}
       >
              <TouchableOpacity   onPress={() => this.props.onChangeLayout({ nativeEvent: { selectedSegmentIndex: 2 } })}>
-    <Image style={{height:35,width:35,resizeMode:"contain"}} source={this.props.layout === 'gridTwo' ? ic_column_two_blue : ic_column_two} />
+    <Image style={{height:40,width:40,resizeMode:"contain"}} source={this.props.layout === 'gridTwo' ? ic_column_two_blue : ic_column_two} />
 </TouchableOpacity>
       </View>
       <View

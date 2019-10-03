@@ -12,6 +12,7 @@ const logo=require('../assets/img/ic_user.png');
 const ic_search=require('../assets/img/search.png');
 import Tab  from 'react-native-material-bottom-navigation'
 import Icon from 'react-native-vector-icons/AntDesign'
+import Icond from 'react-native-vector-icons/Ionicons'
 import { Appbar, BottomNavigation } from 'react-native-paper';
 
 
@@ -20,7 +21,8 @@ const AlbumRoute = () => <Example></Example>;
 const RecentsRoute = () => <Example></Example>;
 const logoDollorive_active = require('../assets/img/dolar_active.png')
 const logoDollorive_inactive = require('../assets/img/dollar_inactive.png')
-
+const more = require('../assets/img/ic_more.png')
+const more_blue = require('../assets/img/ic_more_blue.png')
 class HomeScreenPage extends React.Component {
 
    //Constructor having value 
@@ -31,11 +33,11 @@ class HomeScreenPage extends React.Component {
     search:'',
     index: 0 ,
    routes: [
-    { key: 'music', title: 'Favourites', icon: props => <Icon name="hearto" size={24} color={this.state.index===0?"#638CB6":"#const logoDollor = require('../../assets/img/logoDollar.png')"} />, color:'#3F51B5' },
+    { key: 'music', title: 'Favourites', icon: props => <Icon name="hearto" size={24} color={this.state.index===0?"#638CB6":"#E8E8E8"} />, color:'#3F51B5' },
     { key: 'music', title: 'Featured', icon: props => <Icon name="staro" size={25} color={this.state.index===1?"#638CB6":"#E8E8E8"} />, color:'#3F51B5' },
     { key: 'music', title: 'Coupons', icon: props => <Image style={{height:25,width:25}} source={this.state.index===2?logoDollorive_active:logoDollorive_inactive} />, color:'#3F51B5' },
-    { key: 'music', title: 'Categories', icon: props => <Icon name="hearto" size={20} color={this.state.index===3?"#638CB6":"#E8E8E8"} />, color:'#3F51B5' },
-    { key: 'music', title: 'More', icon: props => <Icon name="hearto" size={20} color={this.state.index===4?"#638CB6":"#E8E8E8"} />, color:'#3F51B5' },
+    { key: 'music', title: 'Categories', icon: props => <Icond name="ios-options" size={20} color={this.state.index===3?"#638CB6":"#E8E8E8"} />, color:'#3F51B5' },
+    { key: 'music', title: 'More', icon: props => <Image style={{height:25,width:25}} source={this.state.index===4?more_blue:more} />, color:'#3F51B5' },
   
   ],
     }
@@ -102,8 +104,8 @@ class HomeScreenPage extends React.Component {
 
 </View> */}
 <View style={{ backgroundColor:'#fff',justifyContent:"center",alignItems:"center",borderRadius:4,flexDirection:"row",width:'95%',height:45}}>
-<Image style={{width:18,height:18,marginBottom:2}} source={ic_search}></Image>
-<TextInput placeholder="Search" style={{fontSize:21,color:'#8C8C8C',paddingTop:Platform.OS === 'android'?10:0,backgroundColor:'white'}} spellCheck={false}
+<Image style={{width:18,height:18,marginBottom:Platform.OS === 'android'?2:0}} source={ic_search}></Image>
+<TextInput placeholder="Search" style={{fontSize:21,color:'#8C8C8C',paddingTop:Platform.OS === 'android'?10:0,backgroundColor:'white',paddingLeft:Platform.OS === 'android'?0:5}} spellCheck={false}
  autoCorrect={false} underlineColorAndroid='white'  textAlign={'center'}></TextInput>
 </View>
 </View>
