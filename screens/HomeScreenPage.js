@@ -37,7 +37,7 @@ class HomeScreenPage extends React.Component {
     { key: 'music', title: 'Featured', icon: props => <Icon name="staro" size={25} color={this.state.index===1?"#638CB6":"#E8E8E8"} />, color:'#3F51B5' },
     { key: 'music', title: 'Coupons', icon: props => <Image style={{height:25,width:25}} source={this.state.index===2?logoDollorive_active:logoDollorive_inactive} />, color:'#3F51B5' },
     { key: 'music', title: 'Categories', icon: props => <Icond name="ios-options" size={20} color={this.state.index===3?"#638CB6":"#E8E8E8"} />, color:'#3F51B5' },
-    { key: 'music', title: 'More', icon: props => <Image style={{height:25,width:25}} source={this.state.index===4?more_blue:more} />, color:'#3F51B5' },
+    { key: 'music', title: 'More', icon: props => <Image style={{height:30,width:30}} source={this.state.index===4?more_blue:more} />, color:'#3F51B5' },
   
   ],
     }
