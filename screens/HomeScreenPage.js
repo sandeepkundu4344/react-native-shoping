@@ -153,7 +153,7 @@ const styles = StyleSheet.create({
     },
     titleLogo:{
     fontSize:30,
-    fontFamily:'Libel Suit',
+    fontFamily:Platform.OS === 'android'?"libelsuit":'Libel Suit',
     width:'20%',
     height:'100%',
     marginBottom:Platform.OS === 'android'?10:0,
@@ -172,7 +172,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',flexDirection:"row"
     },tool_left_text:{
     fontSize:20,
-    fontFamily:'Libel Suit',
+    fontFamily:Platform.OS === 'android'?"libelsuit":'Libel Suit',
     padding:5,
 
     height:'50%',
